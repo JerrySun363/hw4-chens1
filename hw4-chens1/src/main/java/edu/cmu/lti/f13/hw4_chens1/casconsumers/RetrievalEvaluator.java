@@ -17,7 +17,6 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceProcessException;
 import org.apache.uima.util.ProcessTrace;
-
 import edu.cmu.lti.f13.hw4_chens1.typesystems.Document;
 import edu.cmu.lti.f13.hw4_chens1.typesystems.Token;
 import edu.cmu.lti.f13.hw4_chens1.utils.Utils;
@@ -238,7 +237,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
 	 /**
 	  * 
-	  * @return dice coefficient
+	  * @return DiceCoefficient
 	  */
 	private double computeDiceCoefficient(Map<String, Integer> queryVector,
 			Map<String, Integer> docVector) {
@@ -269,9 +268,8 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
 	
 	/**
-	 * 
-	 * @return Jaccardcoefficient  
-	 */
+	 * @return jaccardCoefficient
+	 * */
 	private double computeJaccardcoefficient (Map<String, Integer> queryVector,
 			Map<String, Integer> docVector) {
 		
