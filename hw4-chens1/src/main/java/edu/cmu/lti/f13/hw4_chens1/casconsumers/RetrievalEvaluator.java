@@ -81,7 +81,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	}
 
 	/**
-	 * TODO :: 1. construct the global word dictionary 2. keep the word
+	 *  :: 1. construct the global word dictionary 2. keep the word
 	 * frequency for each sentence
 	 * 
 	 * Here we have a basic assumption that each document are stored together. 
@@ -139,7 +139,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	}
 
 	/**
-	 * TODO 1. Compute Cosine Similarity and rank the retrieved sentences 2.
+	 * 1. Compute Cosine Similarity and rank the retrieved sentences 2.
 	 * Compute the MRR metric
 	 */
 	@Override
@@ -185,7 +185,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 		
 		
 		
-		// TODO :: compute the rank of retrieved sentences
+		//:: compute the rank of retrieved sentences
 		int i=0;
 		answers = new ArrayList[scores.values().size()];
         for(ArrayList<Node> answer : scores.values()){
@@ -194,7 +194,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
         	i++;
         }
 		
-		// TODO :: compute the metric:: mean reciprocal rank
+		//:: compute the metric:: mean reciprocal rank
 		double metric_mrr = compute_mrr();
 		System.out.println(" (MRR) Mean Reciprocal Rank ::" + metric_mrr);
 	}
@@ -306,7 +306,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	private double compute_mrr() {
 		double metric_mrr = 0.0;
         
-		// TODO :: compute Mean Reciprocal Rank (MRR) of the text collection
+		// :: compute Mean Reciprocal Rank (MRR) of the text collection
 		int sent = 1;
 		for(ArrayList<Node> list: answers){
            int rank =0;
