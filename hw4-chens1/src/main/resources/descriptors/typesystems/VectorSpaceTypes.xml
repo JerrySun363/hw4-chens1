@@ -50,5 +50,22 @@
         </featureDescription>
       </features>
     </typeDescription>
+  <typeDescription>
+      <name>edu.cmu.lti.f13.hw4_chens1.typesystems.Query</name>
+      <description>This sub-type indicates that the doc is a type of query for the convenience of the cosine similarity.</description>
+      <supertypeName>edu.cmu.lti.f13.hw4_chens1.typesystems.Document</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.lti.f13.hw4_chens1.typesystems.Answer</name>
+      <description>This is an answer type to be used. Similar to Query, but there is a score stored for this type. It is different from the relevance value specified previously.</description>
+      <supertypeName>edu.cmu.lti.f13.hw4_chens1.typesystems.Document</supertypeName>
+    <features>
+        <featureDescription>
+          <name>score</name>
+          <description>The score is indicated to show the score of the answers and also to rank the documents</description>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
   </types>
 </typeSystemDescription>

@@ -57,6 +57,8 @@ public class VectorSpaceRetrieval {
     if (docUrl == null) {
        throw new IllegalArgumentException("Error opening data/documents.txt");
     }
+    
+    
 		BufferedReader br = new BufferedReader(new InputStreamReader(docUrl.openStream()));
 		while ((sLine = br.readLine()) != null)   {
 			aCas.setDocumentText(sLine);

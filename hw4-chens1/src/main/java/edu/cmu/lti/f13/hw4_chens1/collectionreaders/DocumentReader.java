@@ -1,16 +1,30 @@
 package edu.cmu.lti.f13.hw4_chens1.collectionreaders;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
 
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 
+
+
+
+
+
+
 import edu.cmu.lti.f13.hw4_chens1.typesystems.Document;
+
 
 
 public class DocumentReader 
 extends JCasAnnotator_ImplBase  {
+	
+	
 	
 	@Override
 	public void process(JCas jcas) 
@@ -41,6 +55,8 @@ extends JCasAnnotator_ImplBase  {
 		
 		//Adding populated FeatureStructure to CAS
 		jcas.addFsToIndexes(doc);
+		
+		
 	}
 
 
