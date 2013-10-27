@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** This sub-type indicates that the doc is a type of query for the convenience of the cosine similarity.
- * Updated by JCasGen Thu Oct 24 18:58:32 EDT 2013
+ * Updated by JCasGen Sun Oct 27 16:41:03 EDT 2013
  * XML source: /Users/Jerry/git/hw4-chens1/hw4-chens1/src/main/resources/descriptors/typesystems/VectorSpaceTypes.xml
  * @generated */
 public class Query extends Document {

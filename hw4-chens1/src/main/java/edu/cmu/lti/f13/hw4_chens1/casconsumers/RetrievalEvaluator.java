@@ -5,12 +5,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Map;
 
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
-import org.apache.uima.cas.FSIndex;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.collection.CasConsumer_ImplBase;
 import org.apache.uima.jcas.JCas;
@@ -20,9 +18,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceProcessException;
 import org.apache.uima.util.ProcessTrace;
 
-import edu.cmu.lti.f13.hw4_chens1.typesystems.Answer;
 import edu.cmu.lti.f13.hw4_chens1.typesystems.Document;
-import edu.cmu.lti.f13.hw4_chens1.typesystems.Query;
 import edu.cmu.lti.f13.hw4_chens1.typesystems.Token;
 import edu.cmu.lti.f13.hw4_chens1.utils.Utils;
 
@@ -167,9 +163,9 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 						//locate a potential answer
 						//System.out.println(query.keySet());
 						//System.out.println(this.vectors.get(j).keySet());
-						//double score = this.computeCosineSimilarity(query, this.vectors.get(j));
+						double score = this.computeCosineSimilarity(query, this.vectors.get(j));
 						//double score = this.computeDiceCoefficient(query, this.vectors.get(j));
-						double score = this.computeJaccardcoefficient(query, this.vectors.get(j));
+						//double score = this.computeJaccardcoefficient(query, this.vectors.get(j));
 						Node node = new Node();
 						node.setRel(relList.get(j));
 						node.setScore(score);

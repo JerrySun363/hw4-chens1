@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** This is an answer type to be used. Similar to Query, but there is a score stored for this type. It is different from the relevance value specified previously.
- * Updated by JCasGen Thu Oct 24 18:58:32 EDT 2013
+ * Updated by JCasGen Sun Oct 27 16:41:03 EDT 2013
  * XML source: /Users/Jerry/git/hw4-chens1/hw4-chens1/src/main/resources/descriptors/typesystems/VectorSpaceTypes.xml
  * @generated */
 public class Answer extends Document {
@@ -53,22 +53,6 @@ public class Answer extends Document {
     readObject();
   }   
 
-  /** <!-- begin-user-doc -->
-    * Write your own initialization here
-    * Just use the document to generate a new Answer object.
-    * <!-- end-user-doc -->
-  @generated modifiable */
-
-  public Answer(JCas jcas, Document doc){
-	  super(jcas);
-	  this.setText(doc.getText());
-	  this.setTokenList(doc.getTokenList());
-	  this.setQueryID(doc.getQueryID());
-	  this.setScore(0.0);
-  }
-  
-  
-  
   private void readObject() {/*default - does nothing empty block */}
      
   //*--------------*
