@@ -105,4 +105,8 @@
 			</plugin>
 		</plugins>
 	</build>
+	<scm>
+		<connection>scm:git:git://github.com/JerrySun363/hw4-chens1.git</connection>
+		<developerConnection>scm:git:git://github.com/JerrySun363/hw4-chens1.git</developerConnection>
+	</scm>
 </project>
