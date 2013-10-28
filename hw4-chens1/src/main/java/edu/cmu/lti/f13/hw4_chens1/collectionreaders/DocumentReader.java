@@ -27,6 +27,11 @@ extends JCasAnnotator_ImplBase  {
 	
 	
 	@Override
+	/**
+	 * this method processes the jcas
+	 * and converts a line of doc to a Doc object and stores them
+	 * in the index.
+	 */
 	public void process(JCas jcas) 
 			throws AnalysisEngineProcessException {
 		
@@ -59,7 +64,14 @@ extends JCasAnnotator_ImplBase  {
 		
 	}
 
-
+    /**
+     * 
+     * @param line
+     * @return
+     * 
+     * This static method helps to parse the formatted data line.
+     * 
+     */
 	public static ArrayList<String> parseDataLine(String line) {
 		ArrayList<String> docInfo;
 

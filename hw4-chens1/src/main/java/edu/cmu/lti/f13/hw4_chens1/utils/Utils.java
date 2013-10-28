@@ -27,6 +27,13 @@ public class Utils {
 
 		return new ArrayList<T>(myCollection);
 	}
+	/**
+	 * 
+	 * @param aJCas
+	 * @param aCollection
+	 * @return StringList
+	 * This method is used convert the string list.
+	 */
 	public static StringList createStringList(JCas aJCas, Collection<String> aCollection)
 	 	{
 	 		if (aCollection.size() == 0) {
@@ -50,6 +57,14 @@ public class Utils {
 	 		return list;
 	 	}
 	
+	/**
+	 * 
+	 * @param aJCas
+	 * @param aCollection
+	 * @return <T extends Annotation> FSList
+	 * 
+	 * This method converts collection of objects to FSList of objects.
+	 */
 	public static <T extends Annotation> FSList fromCollectionToFSList(JCas aJCas,
 			Collection<T> aCollection) {
 		if (aCollection.size() == 0) {

@@ -27,6 +27,10 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 	HashSet<String> stopwords = new HashSet<String>();
 	
 	@Override
+	/**
+	 *The method initialize the processing process and load the stopwords.txt
+	 *into the program as a stop words dictionary.
+	 */
 	public void initialize(UimaContext aContext){
 		 URL docUrl2 = VectorSpaceRetrieval.class.getResource("/stopwords.txt");
 		   
@@ -48,6 +52,10 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 	
 	
 	@Override
+	/**
+	 * @author Jerry
+	 *  Process the documents and generate the Term Vector for each document
+	 */
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 
 		FSIterator<Annotation> iter = jcas.getAnnotationIndex().iterator();
@@ -62,6 +70,8 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 	 * 
 	 * @param jcas
 	 * @param doc
+	 * For each document, it simply generates the token vectors for 
+	 * the doc, and update the doc's tokenList field.
 	 */
 
 	private void createTermFreqVector(JCas jcas, Document doc) {

@@ -13,8 +13,8 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** 
- * Updated by JCasGen Sun Oct 27 16:41:03 EDT 2013
+/** The Document type contains meta information and the text of the Document.
+ * Updated by JCasGen Mon Oct 28 15:54:05 EDT 2013
  * @generated */
 public class Document_Type extends Annotation_Type {
   /** @generated */

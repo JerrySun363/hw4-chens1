@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.FSList;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 
- * Updated by JCasGen Sun Oct 27 16:41:03 EDT 2013
+/** The Document type contains meta information and the text of the Document.
+ * Updated by JCasGen Mon Oct 28 15:54:05 EDT 2013
  * XML source: /Users/Jerry/git/hw4-chens1/hw4-chens1/src/main/resources/descriptors/typesystems/VectorSpaceTypes.xml
  * @generated */
 public class Document extends Annotation {
@@ -66,14 +66,14 @@ public class Document extends Annotation {
   //*--------------*
   //* Feature: relevanceValue
 
-  /** getter for relevanceValue - gets 
+  /** getter for relevanceValue - gets Relevance value indicating whether the doc is a query, an irrelevant answer or and relevant answer.
    * @generated */
   public int getRelevanceValue() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_relevanceValue == null)
       jcasType.jcas.throwFeatMissing("relevanceValue", "edu.cmu.lti.f13.hw4_chens1.typesystems.Document");
     return jcasType.ll_cas.ll_getIntValue(addr, ((Document_Type)jcasType).casFeatCode_relevanceValue);}
     
-  /** setter for relevanceValue - sets  
+  /** setter for relevanceValue - sets Relevance value indicating whether the doc is a query, an irrelevant answer or and relevant answer. 
    * @generated */
   public void setRelevanceValue(int v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_relevanceValue == null)
@@ -84,14 +84,14 @@ public class Document extends Annotation {
   //*--------------*
   //* Feature: queryID
 
-  /** getter for queryID - gets 
+  /** getter for queryID - gets This is an integer of the query id readed from documents
    * @generated */
   public int getQueryID() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_queryID == null)
       jcasType.jcas.throwFeatMissing("queryID", "edu.cmu.lti.f13.hw4_chens1.typesystems.Document");
     return jcasType.ll_cas.ll_getIntValue(addr, ((Document_Type)jcasType).casFeatCode_queryID);}
     
-  /** setter for queryID - sets  
+  /** setter for queryID - sets This is an integer of the query id readed from documents 
    * @generated */
   public void setQueryID(int v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_queryID == null)
@@ -102,14 +102,14 @@ public class Document extends Annotation {
   //*--------------*
   //* Feature: text
 
-  /** getter for text - gets 
+  /** getter for text - gets This contains the whole text of the document.
    * @generated */
   public String getText() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_text == null)
       jcasType.jcas.throwFeatMissing("text", "edu.cmu.lti.f13.hw4_chens1.typesystems.Document");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Document_Type)jcasType).casFeatCode_text);}
     
-  /** setter for text - sets  
+  /** setter for text - sets This contains the whole text of the document. 
    * @generated */
   public void setText(String v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_text == null)
@@ -120,14 +120,14 @@ public class Document extends Annotation {
   //*--------------*
   //* Feature: tokenList
 
-  /** getter for tokenList - gets 
+  /** getter for tokenList - gets A list of tokenized Tokens <of token type> of the docs.
    * @generated */
   public FSList getTokenList() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_tokenList == null)
       jcasType.jcas.throwFeatMissing("tokenList", "edu.cmu.lti.f13.hw4_chens1.typesystems.Document");
     return (FSList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Document_Type)jcasType).casFeatCode_tokenList)));}
     
-  /** setter for tokenList - sets  
+  /** setter for tokenList - sets A list of tokenized Tokens <of token type> of the docs. 
    * @generated */
   public void setTokenList(FSList v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_tokenList == null)

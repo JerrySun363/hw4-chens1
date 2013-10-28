@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** This is an answer type to be used. Similar to Query, but there is a score stored for this type. It is different from the relevance value specified previously.
- * Updated by JCasGen Sun Oct 27 16:41:03 EDT 2013
+ * Updated by JCasGen Mon Oct 28 15:54:05 EDT 2013
  * XML source: /Users/Jerry/git/hw4-chens1/hw4-chens1/src/main/resources/descriptors/typesystems/VectorSpaceTypes.xml
  * @generated */
 public class Answer extends Document {
@@ -58,14 +58,14 @@ public class Answer extends Document {
   //*--------------*
   //* Feature: score
 
-  /** getter for score - gets The score is indicated to show the score of the answers and also to rank the documents
+  /** getter for score - gets The score is indicated to show the score of the answers and also for ranking the documents.
    * @generated */
   public double getScore() {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_score == null)
       jcasType.jcas.throwFeatMissing("score", "edu.cmu.lti.f13.hw4_chens1.typesystems.Answer");
     return jcasType.ll_cas.ll_getDoubleValue(addr, ((Answer_Type)jcasType).casFeatCode_score);}
     
-  /** setter for score - sets The score is indicated to show the score of the answers and also to rank the documents 
+  /** setter for score - sets The score is indicated to show the score of the answers and also for ranking the documents. 
    * @generated */
   public void setScore(double v) {
     if (Answer_Type.featOkTst && ((Answer_Type)jcasType).casFeat_score == null)

@@ -13,8 +13,8 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** 
- * Updated by JCasGen Sun Oct 27 16:41:03 EDT 2013
+/** Token is the basic type to contain splited tokens on the document with frequency and its content. 
+ * Updated by JCasGen Mon Oct 28 15:54:05 EDT 2013
  * @generated */
 public class Token_Type extends Annotation_Type {
   /** @generated */

@@ -14,7 +14,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** This is an answer type to be used. Similar to Query, but there is a score stored for this type. It is different from the relevance value specified previously.
- * Updated by JCasGen Sun Oct 27 16:41:03 EDT 2013
+ * Updated by JCasGen Mon Oct 28 15:54:05 EDT 2013
  * @generated */
 public class Answer_Type extends Document_Type {
   /** @generated */

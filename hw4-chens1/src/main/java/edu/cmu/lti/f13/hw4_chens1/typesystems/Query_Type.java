@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** This sub-type indicates that the doc is a type of query for the convenience of the cosine similarity.
- * Updated by JCasGen Sun Oct 27 16:41:03 EDT 2013
+ * Updated by JCasGen Mon Oct 28 15:54:05 EDT 2013
  * @generated */
 public class Query_Type extends Document_Type {
   /** @generated */

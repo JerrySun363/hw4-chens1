@@ -62,8 +62,11 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	
 	public HashMap<Integer, ArrayList<Node>> scores;
 	
-	ArrayList<Node>[] answers;
-
+   	ArrayList<Node>[] answers;
+    /**
+     * Initialize all the data structures of container to a new 
+     * corresponding object. 
+     */
 	public void initialize() throws ResourceInitializationException {
 
 		qIdList = new ArrayList<Integer>();
@@ -80,7 +83,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	}
 
 	/**
-	 *  :: 1. construct the global word dictionary 2. keep the word
+	 *  1. construct the global word dictionary 2. keep the word
 	 * frequency for each sentence
 	 * 
 	 * Here we have a basic assumption that each document are stored together. 
@@ -138,8 +141,8 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	}
 
 	/**
-	 * 1. Compute Cosine Similarity and rank the retrieved sentences 2.
-	 * Compute the MRR metric
+	 * 1. Compute Cosine Similarity and rank the retrieved sentences 
+	 * 2. Compute the MRR metric
 	 */
 	@Override
 	public void collectionProcessComplete(ProcessTrace arg0)
@@ -199,7 +202,9 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	}
 
 	/**
-	 * 
+	 * This method is used to compute the cosine similarity.
+	 * @param queryVector
+	 * @param docVector
 	 * @return cosine_similarity
 	 */
 	private double computeCosineSimilarity(Map<String, Integer> queryVector,
@@ -236,7 +241,9 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	}
 
 	 /**
-	  * 
+	  * This method is used to compute the Dice Coefficient.
+	  * @param queryVector
+	  * @param docVector
 	  * @return DiceCoefficient
 	  */
 	private double computeDiceCoefficient(Map<String, Integer> queryVector,
@@ -268,6 +275,9 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
 	
 	/**
+	 * This method is used to compute Jaccard coefficient
+	 * @param queryVector
+	 * @param docVector
 	 * @return jaccardCoefficient
 	 * */
 	private double computeJaccardcoefficient (Map<String, Integer> queryVector,
@@ -298,7 +308,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	}
 	
 	/**
-	 * 
+	 * This method is used to compute the MRR after all the docs are processed.
 	 * @return mrr
 	 */
 	private double compute_mrr() {
@@ -326,6 +336,13 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 		return metric_mrr;
 	}
 
+	/**
+	 * This method puts FSList to HashMap with token's text as key
+	 * and token's frequency as value.
+	 * 
+	 * @param fsList
+	 * @return
+	 */
 	private HashMap<String, Integer> fromListToHashMap(FSList fsList) {
 		ArrayList<Token> tokens = Utils.fromFSListToCollection(fsList, Token.class);
 		HashMap<String, Integer> vector = new HashMap<String, Integer>();
@@ -335,7 +352,15 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 		return vector;
 
 	}
-
+	
+    /**
+     * This method is used to rank the scored answers so that
+     * they are in descending order by their scores.
+     * This is convenient for later scoring.
+     *  
+     * @param answer
+     * @return
+     */
 	private ArrayList<Node> rankList(ArrayList<Node> answer){
 		ArrayList<Node> newAnswer = new ArrayList<Node>();
 		for(Node a: answer){
